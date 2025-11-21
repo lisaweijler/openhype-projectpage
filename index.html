@@ -110,7 +110,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="./static/images/OpenHype.pdf"
+                <a href="https://openreview.net/pdf?id=zQmXDUbZ5D"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -149,7 +149,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://lisaweijler.github.io/openhype-projectpage/"
+                <a href="https://github.com/lisaweijler/openhype/blob/main/benchmark/README.md"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -338,10 +338,10 @@ Our method outperforms state-of-the-art approaches on standard benchmarks, demon
               During inference, hierarchical traversal along geodesics in hyperbolic space produces multi-scale semantic responses,
 aggregated through a softmax-weighted scheme for robust open-vocabulary segmentation.
             </p>
-            <img src="./static/images/method_inference_original.png"
+            <img src="./static/images/inference.png"
                       class="teaser-image"
                       alt="scene hierarchy example"
-                      style="width: auto; height: 400px;"/>
+                      style="width: auto; height: auto;"/>
             
           </div>
 
@@ -394,12 +394,31 @@ recent discrete-hierarchy approaches, including N2F2 with an overall IoU of 54.6
     <img src="./static/images/qualitative_main.png"
                     class="teaser-image"
                     alt="scene hierarchy example"
-                    style="width: 800px; height: auto;"/>
+                    style="width: 800px; height: auto; margin-bottom: 1em;"/>
 
+
+  <h2 class="title is-4">Hierarchical grouping</h2>
+    <p style = "margin-bottom: 1em;">
+   Given a pixel of interest, OpenHype can traverse the learned hyperbolic space to group the pixel into increasingly broader categories, 
+   effectively revealing the hierarchical structure of the scene.
+
+    </p>
     
+    <img src="./static/images/grouping_gif.gif"
+                    class="teaser-image"
+                    alt="scene hierarchy example"
+                    style="width: 800px; height: auto; margin-bottom: 1em;"/>
 
+    <p style = "margin-bottom: 1em;">
+      We provide a qualitative comparison with the “is part of” relationship querying of <a href="https://relationfield.github.io/">RelationField</a>, which comes closest to hierarchical scene understanding. The pixel of interest is on the fridge door. 
+      While RelationField highlights only part of the fridge and handles single level hierarchies, OpenHype naturally supports hierarchical grouping by leveraging the structure of 
+      our hyperbolic embeddings, without requiring explicit queries.
+  </p>
 
-
+    <img src="./static/images/relationfield.png"
+                    class="teaser-image"
+                    alt="scene hierarchy example"
+                    style="width: 800px; height: auto;"/>
   </div>
 </section>
 
